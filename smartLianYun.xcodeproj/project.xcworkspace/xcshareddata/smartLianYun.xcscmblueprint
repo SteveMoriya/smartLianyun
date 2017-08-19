@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F006D0FCD9A415C321077CDF8197668623218D38",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "1e438fbd-2e3e-c94b-9cc2-c6771e4adff0++2605" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F006D0FCD9A415C321077CDF8197668623218D38" : 9223372036854775807,
+    "1e438fbd-2e3e-c94b-9cc2-c6771e4adff0++2605" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D3D8C231-B74B-4A6A-9DFD-F66055D424CA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F006D0FCD9A415C321077CDF8197668623218D38" : "smartLianYun\/",
+    "1e438fbd-2e3e-c94b-9cc2-c6771e4adff0++2605" : "smartLianYun\/smartLianYun\/Lib\/Reachability\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "smartLianYun",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "smartLianYun.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/yinjiang.luo@10.7.12.99\/svn\/app",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1e438fbd-2e3e-c94b-9cc2-c6771e4adff0++2605"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SteveMoriya\/smartLianyun.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F006D0FCD9A415C321077CDF8197668623218D38"
+    }
+  ]
+}
