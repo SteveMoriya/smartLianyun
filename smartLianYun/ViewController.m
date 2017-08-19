@@ -58,7 +58,7 @@
     //    config.preferences.minimumFontSize = 10; // 默认认为YES
     //    config.preferences.javaScriptEnabled = YES;
     
-    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 20,  kDEVICEWIDTH, kDEVICEHEIGHT-20 ) configuration:config];
+    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0,  kDEVICEWIDTH, kDEVICEHEIGHT ) configuration:config];
     //    [_webView sizeToFit];
     
     
@@ -116,6 +116,14 @@
     }
 }
 
+//如果不实现这个代理方法,默认会屏蔽掉打电话等url
+
+- (void) webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    
+    decisionHandler(WKNavigationActionPolicyAllow);
+    
+}
+
 
 /// 2 页面开始加载
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
@@ -130,6 +138,22 @@
     
     [self showHUDWithReachabilityStatus:status];
     
+    
+    //关于拨打电话时的调用问题
+    NSString *path= [webView.URL absoluteString];
+    NSString * newPath = [path lowercaseString];
+    
+    if ([newPath hasPrefix:@"sms:"] || [newPath hasPrefix:@"tel:"]) {
+        
+        UIApplication * app = [UIApplication sharedApplication];
+        if ([app canOpenURL:[NSURL URLWithString:newPath]]) {
+            [app openURL:[NSURL URLWithString:newPath]];
+        }
+        
+        [self.indicatorView stopAnimating];
+        
+        return;
+    }
 }
 
 /// 4 开始获取到网页内容时返回
